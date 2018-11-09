@@ -1,0 +1,39 @@
+{
+  "name": "ant-effect-checkbox",
+  "version": "1.0.0",
+  "description": "an effect checkbox base on antd",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rimraf lib && babel ./src -d lib && copyfiles -f ./src/style.css lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimCN/ant-effect-checkbox.git"
+  },
+  "keywords": [],
+  "author": "Tim Huang <tim.shanghai@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimCN/ant-effect-checkbox/issues"
+  },
+  "files": [
+    "*.md",
+    "docs",
+    "lib"
+  ],
+  "homepage": "https://github.com/TimCN/ant-effect-checkbox#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copyfiles": "^2.1.0",
+    "rimraf": "^2.6.2"
+  },
+  "peerDependencies": {
+    "antd": "^2.0.0|^3.0.0",
+    "react": "^15.0.0|^16.0.0"
+  }
+}

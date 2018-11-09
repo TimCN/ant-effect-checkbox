@@ -1,24 +1,8 @@
-# ant-effect-checkbox
-
-an effect checkbox base on antd 2.x
-
-# example antd(2.x)
-
-```js
 import React, { Component } from "react";
 import "antd/dist/antd.css";
 import "./App.css";
-import {
-  Form,
-  Input,
-  Icon,
-  Button,
-  Checkbox,
-  DatePicker,
-  Select,
-  Radio
-} from "antd";
-import EffectCheckbox from "./ant-effect-checkbox";
+import { Form, Input, Button, Checkbox, DatePicker, Select, Radio } from "antd";
+import EffectCheckbox from "../../lib";
 const { RangePicker } = DatePicker;
 const RadioGroup = Radio.Group;
 const FormItem = Form.Item;
@@ -139,4 +123,3 @@ class App extends Component {
 }
 
 export default Form.create()(App);
-```

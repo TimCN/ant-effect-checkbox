@@ -1,0 +1,23 @@
+.ant-form-item-control.has-error .ant-effect-checkbox .ant-input,
+.ant-form-item-control.has-error .ant-effect-checkbox .ant-input:hover {
+  border-color: #d9d9d9;
+  box-shadow: none;
+}
+.ant-form-item-control .ant-effect-checkbox {
+  overflow: hidden;
+}
+.ant-form-item-control .ant-effect-checkbox .ant-effect-checkbox-checked {
+  float: left;
+  padding-right: 10px;
+}
+.ant-form-item-control .ant-effect-checkbox .ant-effect-checkbox-effect {
+  display: block;
+  overflow: hidden;
+}
+
+.ant-form-item-control.has-error
+  .ant-effect-checkbox
+  .ant-effect-checkbox-checked
+  .ant-checkbox-inner {
+  border-color: #f04134;
+}
