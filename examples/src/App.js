@@ -39,6 +39,15 @@ class App extends Component {
       }
     });
   };
+  onSetValueClick = () => {
+    const { setFieldsValue } = this.props.form;
+    setFieldsValue({
+      inputEc2: {
+        checked: true,
+        effect: "init inputEc2"
+      }
+    });
+  };
   render() {
     const { getFieldDecorator } = this.props.form;
     const { initialInputEc } = this.state;
@@ -63,14 +72,19 @@ class App extends Component {
         <FormItem {...formItemLayout} label="inputEc2">
           {getFieldDecorator("inputEc2", {
             initialValue: {
-              checked: true,
-              effect: "init inputEc2"
+              checked: false,
+              effect: "init"
             }
           })(
             <EffectCheckbox>
               <Input />
             </EffectCheckbox>
           )}
+        </FormItem>
+        <FormItem style={{ textAlign: "center" }}>
+          <Button type="primary" onClick={this.onSetValueClick}>
+            dynamic setValue
+          </Button>
         </FormItem>
         <FormItem {...formItemLayout} label="selectEc">
           {getFieldDecorator("selectEc")(

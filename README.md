@@ -8,17 +8,8 @@ an effect checkbox base on antd 2.x
 import React, { Component } from "react";
 import "antd/dist/antd.css";
 import "./App.css";
-import {
-  Form,
-  Input,
-  Icon,
-  Button,
-  Checkbox,
-  DatePicker,
-  Select,
-  Radio
-} from "antd";
-import EffectCheckbox from "./ant-effect-checkbox";
+import { Form, Input, Button, Checkbox, DatePicker, Select, Radio } from "antd";
+import EffectCheckbox from "../../lib";
 const { RangePicker } = DatePicker;
 const RadioGroup = Radio.Group;
 const FormItem = Form.Item;
@@ -55,6 +46,15 @@ class App extends Component {
       }
     });
   };
+  onSetValueClick = () => {
+    const { setFieldsValue } = this.props.form;
+    setFieldsValue({
+      inputEc2: {
+        checked: true,
+        effect: "init inputEc2"
+      }
+    });
+  };
   render() {
     const { getFieldDecorator } = this.props.form;
     const { initialInputEc } = this.state;
@@ -79,14 +79,19 @@ class App extends Component {
         <FormItem {...formItemLayout} label="inputEc2">
           {getFieldDecorator("inputEc2", {
             initialValue: {
-              checked: true,
-              effect: "init inputEc2"
+              checked: false,
+              effect: "init"
             }
           })(
             <EffectCheckbox>
               <Input />
             </EffectCheckbox>
           )}
+        </FormItem>
+        <FormItem style={{ textAlign: "center" }}>
+          <Button type="primary" onClick={this.onSetValueClick}>
+            dynamic setValue
+          </Button>
         </FormItem>
         <FormItem {...formItemLayout} label="selectEc">
           {getFieldDecorator("selectEc")(

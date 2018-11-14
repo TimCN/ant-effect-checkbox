@@ -2,7 +2,7 @@
  * @Author: tim huang
  * @Date: 2018-11-10 02:08:01
  * @Last Modified by: tim huang
- * @Last Modified time: 2018-11-10 03:01:46
+ * @Last Modified time: 2018-11-14 19:14:49
  */
 
 import React, { Component } from "react";
@@ -17,7 +17,11 @@ export default class DecimalInput extends Component {
     };
   }
   componentWillReceiveProps({ value }) {
-    if (!this.state.value && value) {
+    const { value: preValue = {} } = this.state;
+    if (
+      value &&
+      (preValue.checked != value.checked || preValue.effect != value.effect)
+    ) {
       this.setState({ value }, this.fireOnChange);
     }
   }

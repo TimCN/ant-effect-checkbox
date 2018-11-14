@@ -1,6 +1,6 @@
 {
   "name": "ant-effect-checkbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an effect checkbox base on antd",
   "main": "lib/index.js",
   "scripts": {
