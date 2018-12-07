@@ -2,14 +2,14 @@
  * @Author: tim huang
  * @Date: 2018-11-10 02:08:01
  * @Last Modified by: tim huang
- * @Last Modified time: 2018-11-14 19:14:49
+ * @Last Modified time: 2018-12-07 18:07:35
  */
 
 import React, { Component } from "react";
 import { Checkbox } from "antd";
 import "./style.css";
 
-export default class DecimalInput extends Component {
+export default class AntEffectCheckbox extends Component {
   constructor(props) {
     super(props);
     this.state = {
